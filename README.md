@@ -3,6 +3,6 @@ Easy logger for handy apps
 
 Usage: 
 
-import logging as log
+import s_logger as log
 
 log.log('some info')
