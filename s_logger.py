@@ -4,6 +4,7 @@ from os import path, mkdir
 num = 1
 day = 0
 noPrint = False
+logIntoFile = True
 
 
 def getName():
@@ -23,8 +24,9 @@ def log(info):
         getName()
     if not noPrint:
         print('\n[' + str(timeNow) + ']\t' + str(info))
-    with open(fileName, 'a') as logFile:
-        logFile.write('\n[' + str(timeNow) + ']\t' + str(info))
+    if logIntoFile:
+        with open(fileName, 'a') as logFile:
+            logFile.write('\n[' + str(timeNow) + ']\t' + str(info))
 
 
 if not path.exists('logs'):
