@@ -25,7 +25,7 @@ def log(*info):
         data += str(i) + ' | '
     data = data[:-2] + '>>'
     if day != timeNow.day:
-        getName()
+        fileName = getName()
     if not noPrint:
         print('\n[' + str(timeNow) + ']<<  ' + str(data))
     if logIntoFile:
